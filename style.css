@@ -1,6 +1,6 @@
 .calculator-container {
     width: 500px;
-    height: 625px;
+    height: 725px;
     background-color: darkgray;
     margin: 0 auto;
     border-radius: 10px;
@@ -24,7 +24,6 @@
 .button-container {
     width: 450px;
     height: 400px;
-    background-color: white;
     border-radius: 10px;
     margin: 25px auto;
     padding: 5px;
@@ -33,19 +32,23 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 10px;
+    
 }
 
-button{
-    width: 90px;
-    height: 90px;
+.button-container > button{
+    flex: 1 0 calc(25% - 10px); 
+    height: calc(25% - 10px);
     border: 2px black solid;
     border-radius: 10px;
     background-color: rgb(36, 121, 93);
     text-align: center;
+    cursor: pointer;
 
     color: rgb(255, 255, 255);
     font-size: 30px;
     font-family: sans-serif;
+
+    flex-grow: 2;
 
 }
 
@@ -53,4 +56,21 @@ button{
     margin-left: 10px;
     font-family: sans-serif;
     font-size: 25px;
+}
+
+#clear{
+    height: 50px;
+    width: 45%;
+    margin-left: 25px;
+
+    border: 2px black solid;
+    border-radius: 10px;
+    background-color: rgb(36, 121, 93);
+    text-align: center;
+    cursor: pointer;
+
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-family: sans-serif;
+
 }

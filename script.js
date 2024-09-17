@@ -1,3 +1,16 @@
+let display_value = ""
+
+const display_text = document.querySelector("#display-text")
+
+const container = document.querySelector(".button-container");
+const buttons = container.querySelectorAll("button");
+
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        display_value = display_value+button.id
+        display_text.textContent = display_value;
+    });
+});
 
 
 
