@@ -2,16 +2,21 @@ let display_value = ""
 
 const display_text = document.querySelector("#display-text")
 
-const container = document.querySelector(".button-container");
-const buttons = container.querySelectorAll("button");
+
+const buttons = document.querySelectorAll(".button-container button");
+const clear = document.querySelector("#clear");
 
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
-        display_value = display_value+button.id
+        display_value = display_value+button.id;
         display_text.textContent = display_value;
     });
 });
 
+clear.addEventListener("click", () => {
+    display_value = ""
+    display_text.textContent = "";
+});
 
 
 function add(num1, num2){
